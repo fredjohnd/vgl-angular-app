@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+
+import { ThemePalette } from '@angular/material/core';
 
 @Component({
   selector: 'vgl-nav',
@@ -6,8 +8,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavComponent implements OnInit {
-  constructor() {}
+export class NavComponent {
 
-  ngOnInit(): void {}
+  /**
+   * Theme color palette for the component 
+   */
+  @Input() color: ThemePalette;
+
 }
