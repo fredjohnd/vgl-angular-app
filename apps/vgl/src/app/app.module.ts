@@ -3,19 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { UiModule } from '@vgl/ui';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from './shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
+import { IndexComponent } from './index/index.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, IndexComponent],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule,
-    UiModule
+    SharedModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

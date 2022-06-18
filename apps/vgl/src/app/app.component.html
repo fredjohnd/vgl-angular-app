@@ -1,14 +1,32 @@
-<vgl-nav color="primary">
+<div class="container" fxLayout="column">
+  <header>
+    <nav role="nav">
+      <vgl-nav color="primary">
+        <!-- Hamburger button -->
+        <button mat-icon-button aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
 
-    <button mat-icon-button aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <span>My App</span>
-      <span fxFlex="1 1 auto"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
-</vgl-nav>
+        <!-- Homepage -->
+        <button mat-button aria-label="Homepage link">
+          <mat-icon class="icon-homepage">sports_esports</mat-icon>
+          <span>{{ ('modules.app.index.title' | translate) | uppercase }}</span>
+        </button>
+
+        <!-- <span fxFlex="1 1 auto"></span> -->
+
+        <!-- Page 1 -->
+        <button mat-button aria-label="Page 1"><span>Page 1</span></button>
+
+        <!-- Page 2 -->
+        <button mat-button aria-label="Page 2">
+          <span>Page 2</span>
+        </button>
+      </vgl-nav>
+    </nav>
+  </header>
+
+  <main fxLayout="row" fxLayoutGap="16px">
+        <router-outlet></router-outlet>
+  </main>
+</div>
