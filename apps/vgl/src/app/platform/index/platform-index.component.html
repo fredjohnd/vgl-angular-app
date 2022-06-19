@@ -1,1 +1,8 @@
-<h2>{{platformName}}</h2>
+<h2>{{platformName | uppercase}}</h2>
+<ul *ngIf="nameIndexes$ | async as letters" fxLayout="row" fxLayoutGap="16px">
+    <li *ngFor="let letter of letters">{{letter}}</li>
+</ul>
+
+<section>
+    <p *ngFor="let item of items"><a [routerLink]="[item.slug]">{{item.name}}</a></p>
+</section>

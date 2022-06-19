@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import { Subject, takeUntil } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { of, Subject, takeUntil } from 'rxjs';
+import { tap, take } from 'rxjs/operators';
+import { PlatformService } from '../shared/platform.service';
 
 @Component({
   selector: 'vgl-platform-index',
@@ -10,12 +11,15 @@ import { tap } from 'rxjs/operators';
 })
 
 export class PlatformIndexComponent implements OnInit, OnDestroy {
-  
+
   protected platformName = '';
 
   private destroyed$ = new Subject<void>();
+  
+  items: Array<{name: string, slug: string}> = [];
+  nameIndexes$ = of(['A', 'F', 'H', 'M', 'N', 'R', 'S', 'T']);
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private service: PlatformService) { }
 
   ngOnInit(): void {
     this.route.params.pipe(
@@ -26,6 +30,10 @@ export class PlatformIndexComponent implements OnInit, OnDestroy {
 
   loadPlatformData(platform: string): void {
     this.platformName = platform;
+    this.service.getItemsForPlatform(platform).pipe(
+      take(1),
+      tap(data => this.items = data)
+    ).subscribe()
   }
 
   ngOnDestroy(): void {
