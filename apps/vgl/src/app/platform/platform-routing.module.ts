@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PlatformComponent } from './platform.component';
+import { PlatformIndexComponent } from './index/platform-index.component';
 import { PlatformResolver } from './platform.resolver';
 
 const routes: Routes = [
@@ -9,7 +9,7 @@ const routes: Routes = [
     resolve: {
       platformId: PlatformResolver
     },
-    component: PlatformComponent 
+    component: PlatformIndexComponent 
   }
 ];
 

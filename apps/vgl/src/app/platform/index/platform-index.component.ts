@@ -4,18 +4,19 @@ import { Subject, takeUntil } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Component({
-  selector: 'vgl-platform',
-  templateUrl: './platform.component.html',
-  styleUrls: ['./platform.component.css']
+  selector: 'vgl-platform-index',
+  templateUrl: './platform-index.component.html',
+  styleUrls: ['./platform-index.component.scss'],
 })
-export class PlatformComponent implements OnInit, OnDestroy {
 
-  protected platformName = '';
+export class PlatformIndexComponent implements OnInit, OnDestroy {
   
+  protected platformName = '';
+
   private destroyed$ = new Subject<void>();
 
-  constructor(private route: ActivatedRoute) {}
-  
+  constructor(private route: ActivatedRoute) { }
+
   ngOnInit(): void {
     this.route.params.pipe(
       takeUntil(this.destroyed$),
@@ -30,6 +31,5 @@ export class PlatformComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.destroyed$.next();
     this.destroyed$.complete();
-}
-
+  }
 }
