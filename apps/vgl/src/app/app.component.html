@@ -1,32 +1,32 @@
 <div class="container" fxLayout="column">
   <header>
     <nav role="nav">
+
       <vgl-nav color="primary">
         <!-- Hamburger button -->
-        <button mat-icon-button aria-label="Example icon-button with menu icon">
+        <a mat-icon-button aria-label="Expand Collapse Side navigation">
           <mat-icon>menu</mat-icon>
-        </button>
+        </a>
 
         <!-- Homepage -->
-        <button mat-button aria-label="Homepage link">
+        <a routerLink="/" mat-button aria-label="Homepage link">
           <mat-icon class="icon-homepage">sports_esports</mat-icon>
           <span>{{ ('modules.app.index.title' | translate) | uppercase }}</span>
-        </button>
+        </a>
+
 
         <!-- <span fxFlex="1 1 auto"></span> -->
 
         <!-- Page 1 -->
-        <button mat-button aria-label="Page 1"><span>Page 1</span></button>
+        <a mat-button routerLink="/platform/ps2">PS2</a>
 
         <!-- Page 2 -->
-        <button mat-button aria-label="Page 2">
-          <span>Page 2</span>
-        </button>
+        <a mat-button routerLink="/platform/wii">Wii U</a>
       </vgl-nav>
     </nav>
   </header>
 
-  <main fxLayout="row" fxLayoutGap="16px">
+  <main fxLayout="column">
         <router-outlet></router-outlet>
   </main>
 </div>
