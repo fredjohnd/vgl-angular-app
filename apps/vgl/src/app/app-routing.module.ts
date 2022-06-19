@@ -4,7 +4,8 @@ import { IndexComponent } from './index/index.component';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', component: IndexComponent }
+  { path: '', pathMatch: 'full', component: IndexComponent },
+  { path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule) }
 ];
 
 @NgModule({
