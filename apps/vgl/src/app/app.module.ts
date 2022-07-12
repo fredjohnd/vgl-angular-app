@@ -8,7 +8,6 @@ import { MaterialModule } from './material.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './index/index.component';
-import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [AppComponent, IndexComponent],
@@ -17,8 +16,7 @@ import { StoreModule } from '@ngrx/store';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    AppRoutingModule,
-    StoreModule.forRoot({}, {}),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

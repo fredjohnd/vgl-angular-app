@@ -18,10 +18,7 @@
         <!-- <span fxFlex="1 1 auto"></span> -->
 
         <!-- Page 1 -->
-        <a mat-button routerLink="/platform/ps2">PS2</a>
-
-        <!-- Page 2 -->
-        <a mat-button routerLink="/platform/wii">Wii U</a>
+        <a *ngFor="let platform of (platforms$ | async)" mat-button [routerLink]="['platform', platform.slug]">{{platform.name}}</a>
       </vgl-nav>
     </nav>
   </header>

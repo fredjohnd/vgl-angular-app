@@ -1,6 +1,5 @@
-
-
-# Vgl
+# vgl-angular-app
+Video Game Library - Angular application
 
 This project was generated using [Nx](https://nx.dev).
 
