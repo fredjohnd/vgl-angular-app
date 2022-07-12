@@ -4,6 +4,13 @@
 
 export const environment = {
   production: false,
+  API: {
+    HOST: 'http://localhost:3000/',
+    NAMESPACE: '',
+    PLATFORMS: {
+      FETCH: 'platforms'
+    }
+  }
 };
 
 /*

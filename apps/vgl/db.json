@@ -1,0 +1,14 @@
+{
+    "platforms": [
+        {
+            "id": 1,
+            "name": "PS2",
+            "slug": "ps2"
+        },
+        {
+            "id": 2,
+            "name": "WII",
+            "slug": "wii"
+        }
+    ]
+}
