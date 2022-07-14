@@ -8,7 +8,8 @@ export const environment = {
     HOST: 'http://localhost:3000/',
     NAMESPACE: '',
     PLATFORMS: {
-      FETCH: 'platforms'
+      ALL: 'platforms',
+      SINGLE: 'platforms'
     }
   }
 };

@@ -1,8 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { of, Subject, takeUntil } from 'rxjs';
-import { tap, take } from 'rxjs/operators';
-import { PlatformService } from '../shared/platform.service';
+import { ActivatedRoute, Data } from '@angular/router';
+import { Observable, Subject, takeUntil } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { IPlatform } from '../../shared/interfaces/platform.interface';
+import { PlatformFetcherService } from '../../shared/services/platforms-fetcher.service';
 
 @Component({
   selector: 'vgl-platform-index',
@@ -17,23 +18,20 @@ export class PlatformIndexComponent implements OnInit, OnDestroy {
   private destroyed$ = new Subject<void>();
   
   items: Array<{name: string, slug: string}> = [];
-  nameIndexes$ = of(['A', 'F', 'H', 'M', 'N', 'R', 'S', 'T']);
 
-  constructor(private route: ActivatedRoute, private service: PlatformService) { }
+  platform$: Observable<IPlatform>;
+
+  constructor(private route: ActivatedRoute, private service: PlatformFetcherService) { }
 
   ngOnInit(): void {
-    this.route.params.pipe(
+    this.platform$ = this.route.data.pipe(
+      map((data: Data) => data['platform']),
       takeUntil(this.destroyed$),
-      tap((params: Params) => this.loadPlatformData(params['platformId']))
-    ).subscribe();
+    );
   }
 
-  loadPlatformData(platform: string): void {
-    this.platformName = platform;
-    this.service.getItemsForPlatform(platform).pipe(
-      take(1),
-      tap(data => this.items = data)
-    ).subscribe()
+  fetchPlatform(slug: string): Observable<IPlatform> {
+    return this.service.getPlatformBySlug(slug);
   }
 
   ngOnDestroy(): void {

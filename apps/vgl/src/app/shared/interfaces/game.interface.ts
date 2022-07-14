@@ -29,7 +29,6 @@ export interface IGame extends INamedObject {
 
     /**
      * The Optional Youtube video URL for a trailer/gameplay video of the given game
-     * @optional
      */
     youtubeUrl?: string;
 
@@ -41,7 +40,7 @@ export interface IGame extends INamedObject {
     /**
      * The maximum number of players the game supports
      */
-    players: number;
+    players?: number;
 
     /**
      * The slug aka Friendly URL string

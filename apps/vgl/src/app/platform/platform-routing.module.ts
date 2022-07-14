@@ -6,18 +6,20 @@ import { PlatformResolver } from './platform.resolver';
 
 const routes: Routes = [
   {
-    path: ':platformId',
+    path: ':slug',
     pathMatch: 'full',
     resolve: {
-      platformId: PlatformResolver
+      platform: PlatformResolver
     },
     component: PlatformIndexComponent,
+    children: [
+        {
+          path: ':gameId',
+          pathMatch: 'full',
+          component: GameDetailComponent
+        }
+    ]
   },
-  {
-    path: ':platformId/:gameId',
-    pathMatch: 'full',
-    component: GameDetailComponent
-  }
 
 ];
 
