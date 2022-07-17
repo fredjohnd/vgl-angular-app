@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "nx",
     "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2020 browser module main",
-    "json-server": "json-server --watch apps/vgl/db.json",
-    "start": "nx serve",
+    "json-server": "nvm use 18.2.0 && json-server --watch json-server/db.json",
+    "start": "nvm use 18.2.0 && nx serve vgl",
     "build": "nx build",
     "test": "nx test"
   },

@@ -1,12 +1,17 @@
 <div *ngIf="(platform$ | async) as platform">
 
-    <h1>A</h1>
-    <h2>{{platform.name}}</h2>
-    <!-- <ul *ngIf="nameIndexes$ | async as letters" fxLayout="row" fxLayoutGap="16px">
-        <li *ngFor="let letter of letters">{{letter}}</li>
-    </ul> -->
+  <h2>{{platform.name}}</h2>
 
-    <section>
-        <!-- <p *ngFor="let item of items"><a [routerLink]="[item.slug]">{{item.name}}</a></p> -->
-    </section>
+  <section>
+    <ng-container *ngIf="platformItems">
+      <ul fxLayout="column" fxLayoutGap="16px">
+        <li *ngFor="let item of platformItems.results">
+          <a [routerLink]="[item.slug]">{{item.name}}</a>
+        </li>
+      </ul>
+
+    </ng-container>
+  </section>
+
+  <router-outlet></router-outlet>
 </div>

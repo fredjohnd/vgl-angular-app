@@ -5,14 +5,14 @@ import { IPlatform } from '../interfaces/platform.interface';
 import { IPlatformFetcherService } from './platform-fetcher.service.interface';
 import { WebService } from './web.service';
 import { map } from 'rxjs/operators';
-  
+
 @Injectable({
     providedIn: 'root'
   })
-  
+
 export class PlatformFetcherService implements IPlatformFetcherService {
 
-  
+
   constructor(private webService: WebService) {}
 
   /**

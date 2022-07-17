@@ -2,8 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 
-import { catchError } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
+import { WebNormalizer } from '../normalizers/web.normalizer';
+import { WebSerializer } from '../serializers/web.serializer';
+
+export interface WebParams {
+  [param: string]: string;
+}
 
 @Injectable({
     providedIn: 'root'
@@ -11,14 +17,22 @@ import { environment } from '../../../environments/environment';
 export class WebService {
 
 
-    constructor(private http: HttpClient) {}
+    constructor(
+      private http: HttpClient,
+      private webNormalizer: WebNormalizer,
+      private webSerializer: WebSerializer
+      ) {}
 
-    get<T>(endpoint: string, params?: HttpParams | { [param: string]: string | string[] }): Observable<T> {
+    get<T>(endpoint: string, params: WebParams = {}): Observable<T> {
+
+      const httpParams = new HttpParams({fromObject: this._serializeParams({...params})});
+
         return this.http.get<T>(this._getUrl(endpoint), {
             headers: this._getHeaders(),
-            params
+            params: httpParams,
+            observe: 'response'
         }).pipe(
-            // tap(() => this.progress.stopLoading()),
+            map((response) => this._normalizeData<T>(response.body, params, response.headers)),
             catchError((err, caught) => this._catchError(err, caught))
         );
     }
@@ -65,6 +79,14 @@ export class WebService {
             'Content-Type': 'application/json',
             // 'Authorization': `Bearer ${this.session.currentUser.authorization.access_token}`
         });
+    }
+
+    _normalizeData<T>(responseBody: unknown, params: WebParams, headers: HttpHeaders) : T {
+      return this.webNormalizer.normalize(responseBody, params, headers);
+    }
+
+    _serializeParams(params?: WebParams) {
+      return this.webSerializer.serializeParams(params);
     }
 
     _catchError(error: unknown, caught: unknown) {

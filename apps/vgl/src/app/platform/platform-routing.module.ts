@@ -15,7 +15,6 @@ const routes: Routes = [
     children: [
         {
           path: ':gameId',
-          pathMatch: 'full',
           component: GameDetailComponent
         }
     ]

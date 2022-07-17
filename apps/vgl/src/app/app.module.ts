@@ -8,6 +8,8 @@ import { MaterialModule } from './material.module';
 import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexComponent } from './index/index.component';
+import { WebNormalizer } from './shared/normalizers/web.normalizer';
+import { JsonServerNormalizer } from './shared/normalizers/json-server.normalizer';
 
 @NgModule({
   declarations: [AppComponent, IndexComponent],
@@ -18,7 +20,9 @@ import { IndexComponent } from './index/index.component';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    {provide: WebNormalizer, useClass: JsonServerNormalizer}
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
