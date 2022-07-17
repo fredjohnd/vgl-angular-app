@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@vgl/ui": ["libs/ui/src/index.ts"],
+      "@vgl/ui": ["libs/ui/src/index.ts"]
       // "@vgl-shared": ["apps/vgl/src/app/shared/*"],
       // "@vgl-environment": ["./apps/vgl/src/environments/*"]
     }

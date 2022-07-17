@@ -10,6 +10,10 @@ export const environment = {
     PLATFORMS: {
       ALL: 'platforms',
       SINGLE: 'platforms'
+    },
+    GAMES: {
+      ALL: 'games',
+      SINGLE: 'games'
     }
   }
 };
