@@ -4,8 +4,8 @@ import {
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { IPlatform } from '../shared/interfaces/platform.interface';
-import { PlatformFetcherService } from '../shared/services/platforms-fetcher.service';
+import { IPlatform } from '../../shared/interfaces/platform.interface';
+import { PlatformFetcherService } from '../../shared/services/platforms-fetcher.service';
 
 @Injectable({
   providedIn: 'root'

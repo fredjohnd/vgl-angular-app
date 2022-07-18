@@ -6,12 +6,11 @@
     <ng-container *ngIf="platformItems">
       <ul fxLayout="column" fxLayoutGap="16px">
         <li *ngFor="let item of platformItems.results">
-          <a [routerLink]="[item.slug]">{{item.name}}</a>
+          <a [routerLink]="['game', item.id + '-' + item.slug]">{{item.name}}</a>
         </li>
       </ul>
 
     </ng-container>
   </section>
 
-  <router-outlet></router-outlet>
 </div>

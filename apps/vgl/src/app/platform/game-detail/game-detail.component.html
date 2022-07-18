@@ -1,2 +1,8 @@
-<h2>{{game}}</h2>
-<p>game-detail works!</p>
+<div *ngIf="(game$ | async) as game">
+  <h2>{{game.name}}</h2>
+  <h3>{{game.releaseDate | date:'dd MMM YYYY'}}</h3>
+  <p>{{game.overview}}</p>
+  <hr>
+  <pre>{{game | json}}</pre>
+
+</div>
