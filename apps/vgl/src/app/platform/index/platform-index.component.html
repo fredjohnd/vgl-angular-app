@@ -1,10 +1,8 @@
 <div *ngIf="(platform$ | async) as platform">
 
-  <h2>{{platform.name}}</h2>
-
   <section>
     <ng-container *ngIf="platformItems">
-      <ul fxLayout="column" fxLayoutGap="16px">
+      <ul fxLayout="column" fxLayoutGap="10px">
         <li *ngFor="let item of platformItems.results">
           <a [routerLink]="['game', item.id + '-' + item.slug]">{{item.name}}</a>
         </li>

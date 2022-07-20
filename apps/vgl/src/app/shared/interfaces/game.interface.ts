@@ -5,7 +5,7 @@ import { INamedObject } from "./named-object.interface";
  * @extends INamedObject
  * @todo Might need to support multiple genres in the future
  */
-export interface IGame extends INamedObject { 
+export interface IGame extends INamedObject {
 
     /**
      * The Platform Id the game belongs to
@@ -26,6 +26,11 @@ export interface IGame extends INamedObject {
      * The game overview/description
      */
     overview: string;
+
+    /**
+     * The url for the game's thumbnail
+     */
+    thumbnailUrl?: string;
 
     /**
      * The Optional Youtube video URL for a trailer/gameplay video of the given game

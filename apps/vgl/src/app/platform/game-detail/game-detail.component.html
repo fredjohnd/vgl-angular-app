@@ -1,8 +1,10 @@
-<div *ngIf="(game$ | async) as game">
-  <h2>{{game.name}}</h2>
-  <h3>{{game.releaseDate | date:'dd MMM YYYY'}}</h3>
-  <p>{{game.overview}}</p>
-  <hr>
-  <pre>{{game | json}}</pre>
+<!-- Game section -->
+<section *ngIf="(game$ | async) as game">
 
-</div>
+  <!-- Game header -->
+  <vgl-game-header [game]="game"></vgl-game-header>
+
+  <!-- Game content -->
+  <p>{{game.overview}}</p>
+
+</section>

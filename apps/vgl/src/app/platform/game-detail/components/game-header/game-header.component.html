@@ -1,0 +1,22 @@
+<header>
+  <div fxLayout="row" fxLayoutGap="10px">
+
+    <!-- Image thumbnail -->
+    <img [src]="game.thumbnailUrl">
+
+    <!-- Title / Subtitles -->
+    <div fxFlex="noshrink">
+      <h2>{{game.name}}</h2>
+      <h4>Released: {{game.releaseDate | date:'dd MMM YYYY'}}</h4>
+  </div>
+
+  <!-- Spacer -->
+  <div fxFlex="1 1 auto"></div>
+
+  <!-- Right section -->
+  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px 10px grid">
+    <span>Rating: 10</span>
+    <span><button>Add to collection</button></span>
+  </div>
+  </div>
+</header>
