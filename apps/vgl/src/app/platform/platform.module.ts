@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { PlatformRoutingModule } from './platform-routing.module';
 import { PlatformIndexComponent } from './index/platform-index.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
-import { GameHeaderComponent } from './game-detail/components/game-header/game-header.component';
+import { GameHeaderComponent } from './components/game-header/game-header.component';
 import { PlatformSharedModule } from './shared/platform-shared.module';
+import { VglImageGalleryModule } from '@vgl/image-gallery';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,11 @@ import { PlatformSharedModule } from './shared/platform-shared.module';
     GameDetailComponent,
     GameHeaderComponent,
   ],
-  imports: [CommonModule, PlatformSharedModule, PlatformRoutingModule],
+  imports: [
+    CommonModule,
+    PlatformSharedModule,
+    PlatformRoutingModule,
+    VglImageGalleryModule
+  ],
 })
 export class PlatformModule {}

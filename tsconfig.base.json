@@ -16,9 +16,8 @@
     "noPropertyAccessFromIndexSignature": false,
     "baseUrl": ".",
     "paths": {
+      "@vgl/image-gallery": ["libs/image-gallery/src/index.ts"],
       "@vgl/ui": ["libs/ui/src/index.ts"]
-      // "@vgl-shared": ["apps/vgl/src/app/shared/*"],
-      // "@vgl-environment": ["./apps/vgl/src/environments/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

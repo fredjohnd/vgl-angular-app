@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { IGame } from '../../../../shared/interfaces/game.interface';
+import { IGame } from '../../../shared/interfaces';
 
 @Component({
   selector: 'vgl-game-header',
@@ -7,7 +7,7 @@ import { IGame } from '../../../../shared/interfaces/game.interface';
   styleUrls: ['./game-header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GameHeaderComponent  {
+export class GameHeaderComponent {
 
   @Input() game: IGame;
 }

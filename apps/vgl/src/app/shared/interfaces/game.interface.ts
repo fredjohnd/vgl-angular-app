@@ -33,6 +33,11 @@ export interface IGame extends INamedObject {
     thumbnailUrl?: string;
 
     /**
+     * Array of gallery images urls
+     */
+    galleryUrls: string[];
+
+    /**
      * The Optional Youtube video URL for a trailer/gameplay video of the given game
      */
     youtubeUrl?: string;

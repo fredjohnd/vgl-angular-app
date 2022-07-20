@@ -58,6 +58,7 @@
             "genreId": 3,
             "developerId": 1,
             "thumbnailUrl": "https://picsum.photos/100",
+            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2005-02-22",
             "overview": "GT4 continues in its predecessors' footsteps by offering an extremely large list of cars; the PAL version features 721 cars from 80 manufacturers.",
             "slug": "gt4"
@@ -69,6 +70,7 @@
             "genreId": 2,
             "developerId": 2,
             "thumbnailUrl": "https://picsum.photos/100",
+            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2001-12-17",
             "overview": "There are seven main playable characters in Final Fantasy X. Tidus is a cheerful young teenager and the star blitzball player for the Zanarkand Abes. He has long resented his father, a renowned blitzball player who disappeared during Tidus's youth. Yuna is the daughter of the High Summoner Braska, who defeated Sin to bring about the Calm, a time of peace. Yuna embarks on a pilgrimage to obtain the final aeon and defeat Sin. Kimahri Ronso is a young warrior of the Ronso tribe who watched over Yuna during her childhood. Wakka is a blitzball player and devout follower of the Yevon order. Lulu is a stoic and self-possessed, but well-meaning Black Mage. Auron is a taciturn former warrior monk, and finally Rikku is a perky Al Bhed girl with extensive knowledge of machinery. The primary antagonists of the game are Maester Seymour Guado and the other maesters of the Yevon religion, while the enormous whale-like monster Sin serves as the primary source of conflict.",
             "slug": "ffx"
@@ -80,6 +82,7 @@
             "genreId": 3,
             "developerId": 3,
             "thumbnailUrl": "https://picsum.photos/100",
+            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2014-05-30",
             "overview": "Feel the rush as your kart rockets across the ceiling!",
             "slug": "mariokart8"
@@ -91,6 +94,7 @@
             "genreId": 4,
             "developerId": 3,
             "thumbnailUrl": "https://picsum.photos/100",
+            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2015-07-09",
             "overview": "The game that made Mario™ a sports legend!",
             "slug": "mariotennis"
@@ -102,6 +106,7 @@
             "genreId": 2,
             "developerId": 2,
             "thumbnailUrl": "https://picsum.photos/100",
+            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2003-11-18",
             "overview": "The game's story follows the character Yuna from Final Fantasy X as she seeks to resolve political conflicts in the fictional world of Spira before it leads to war.",
             "slug": "ffx-2"

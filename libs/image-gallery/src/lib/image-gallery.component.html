@@ -1,0 +1,6 @@
+<h4>Gallery</h4>
+<ul fxLayout="row" fxLayoutGap="10px">
+  <li fxFlex="nogrow" *ngFor="let url of imagesSrcUrls">
+    <img [src]="url"/>
+  </li>
+</ul>

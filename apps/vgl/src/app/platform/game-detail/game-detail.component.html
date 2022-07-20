@@ -1,10 +1,13 @@
 <!-- Game section -->
-<section *ngIf="(game$ | async) as game">
+<section *ngIf="(game$ | async) as game" fxLayout="column">
 
   <!-- Game header -->
   <vgl-game-header [game]="game"></vgl-game-header>
 
   <!-- Game content -->
   <p>{{game.overview}}</p>
+
+  <!-- Gallery -->
+  <vgl-image-gallery  [imagesSrcUrls]="game.galleryUrls"></vgl-image-gallery>
 
 </section>
