@@ -10,7 +10,8 @@ export class JsonServerNormalizer {
   _addPagination<T>(data: unknown, params: WebParams, headers: HttpHeaders): T {
 
     if (params.page || params.limit) {
-      const currentPage = parseInt(params.page || '1', 10);
+      const page = params.page as string;
+      const currentPage = parseInt(page || '1', 10);
       const totalCount = parseInt(headers.get('x-total-count') || '0', 10);
       const totalPages = totalCount / 10.0;
 

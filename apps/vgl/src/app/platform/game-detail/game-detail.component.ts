@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Data } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
-import { IGame } from '../../shared/interfaces/game.interface';
+import { IGameExpanded } from '../../shared/interfaces/game.interface';
 
 @Component({
   selector: 'vgl-game-detail',
@@ -12,7 +12,7 @@ import { IGame } from '../../shared/interfaces/game.interface';
 })
 export class GameDetailComponent implements OnInit {
 
-  protected game$: Observable<IGame>;
+  protected game$: Observable<IGameExpanded>;
 
   private destroyed$ = new Subject<void>();
 

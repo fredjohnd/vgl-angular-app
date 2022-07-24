@@ -8,7 +8,7 @@ import { WebNormalizer } from '../normalizers/web.normalizer';
 import { WebSerializer } from '../serializers/web.serializer';
 
 export interface WebParams {
-  [param: string]: string;
+  [param: string]: string | string[];
 }
 
 @Injectable({

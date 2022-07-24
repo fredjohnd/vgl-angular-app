@@ -1,4 +1,6 @@
+import { IDeveloper } from "./genre.developer";
 import { INamedObject } from "./named-object.interface";
+import { IPlatform } from "./platform.interface";
 
 /**
  * The Game interface
@@ -56,4 +58,9 @@ export interface IGame extends INamedObject {
      * The slug aka Friendly URL string
      */
     slug: string;
+}
+
+export interface IGameExpanded extends IGame {
+  platform: IPlatform,
+  developer: IDeveloper
 }

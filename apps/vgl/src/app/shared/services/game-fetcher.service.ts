@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { Observable } from 'rxjs';
-import { IGame } from '../interfaces/game.interface';
+import { IGame, IGameExpanded } from '../interfaces/game.interface';
 import { IPaginatedResults } from '../interfaces/paginated-results.interface';
 import { IGameFetcherService } from './game-fetcher.service.interface';
 import { WebService } from './web.service';
@@ -14,14 +14,20 @@ export class GameFetcherService implements IGameFetcherService {
 
     constructor(private web: WebService) {}
 
-    getGameById(id: string): Observable<IGame> {
+    /**
+     * Gets a game by its Id
+     * @param id The id of the object
+     * @returns
+     */
+    getGameById(id: string): Observable<IGameExpanded> {
         const endpoint = `${environment.API.GAMES.SINGLE}/${id}`;
-        return this.web.get(endpoint);
+        const params = {expand: ['platform', 'developer']};
+        return this.web.get(endpoint, params);
     }
 
     getGamesByPlatform(platformId: string, page: number = 1): Observable<IPaginatedResults<IGame>> {
         const endpoint = environment.API.GAMES.ALL;
-        return this.web.get(endpoint, {platformId, page: page.toString(), limit: '2'});
+        return this.web.get(endpoint, {platformId, page: page.toString(), limit: '10'});
     }
 
     getGamesByGenre(genreId: string): Observable<IPaginatedResults<IGame>> {
