@@ -1,5 +1,8 @@
 <header class="game-header">
-  <div fxLayout="row" fxLayoutGap="40px">
+
+  <div fxHide.lt-md fxFlex="0 0 20%"></div>
+
+  <div fxLayout="row" fxLayoutGap="40px" fxLayout.lt-md="column" fxLayoutGap.lt-md="10px">
 
     <!-- Image thumbnail -->
     <div class="image-wrapper" fxLayout="row" fxLayoutAlign="center center" fxFlex="nogrow">
@@ -23,7 +26,7 @@
     </div>
 
     <!-- Spacer -->
-    <div fxFlex="1 1 auto"></div>
+    <div fxHide.lt-md fxFlex="1 1 auto"></div>
 
     <!-- Right section -->
     <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px 10px grid">
@@ -36,4 +39,6 @@
         </button></span>
     </div>
   </div>
+
+  <div fxHide.lt-md fxFlex="0 0 20%"></div>
 </header>

@@ -1,0 +1,9 @@
+@use '@angular/material' as mat;
+
+$typography-primary-config: mat.define-typography-config(
+  $font-family: $font-primary
+);
+
+$typography-secondary-config: mat.define-typography-config(
+  $font-family: $font-secondary
+);

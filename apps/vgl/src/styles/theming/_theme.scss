@@ -14,16 +14,19 @@ $vgl-theme: mat.define-light-theme((
 ));
 
 // Import app's components themes
+@import 'components/game-detail/theme';
 @import 'components/game-header/theme';
+@import 'components/tabs/theme';
 @import 'components/button/theme';
-
 
 /**
 * Mixin to style all vgl-game-header component
 */
 @mixin vgl-all-component-themes($theme) {
 
+  @include vgl-game-detail-theme($theme);
   @include vgl-game-header-theme($theme);
   @include vgl-button-theme($theme);
 
+  @include vgl-tabs-theme($theme);
 }

@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+/**
+* Mixin to style tabs component
+*/
+@mixin vgl-tabs-theme($theme) {
+
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  $component-theme-color: $primary;
+  $level: 100;
+  $level-contrast: $level + '-contrast';
+
+  // @include mat.tabs-theme($vgl-theme);
+
+  // .mat-tab-label, .mat-tab-link {
+  //   color: mat.get-color-from-palette($component-theme-color, $level-contrast);
+  // }
+}

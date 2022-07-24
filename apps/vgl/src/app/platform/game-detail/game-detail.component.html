@@ -1,13 +1,48 @@
 <!-- Game section -->
-<section *ngIf="(game$ | async) as game" fxLayout="column">
+<section class="game-detail" *ngIf="(game$ | async) as game" fxLayout="column">
 
   <!-- Game header -->
   <vgl-game-header [game]="game"></vgl-game-header>
 
   <!-- Game content -->
-  <p>{{game.overview}}</p>
+  <div class="game-content-outer" fxLayout="row" >
 
-  <!-- Gallery -->
-  <vgl-image-gallery  [imagesSrcUrls]="game.galleryUrls"></vgl-image-gallery>
+    <!-- Left Spacer -->
+    <div fxHide.lt-md fxFlex="1 0 20%"></div>
+
+    <!-- Inner content -->
+    <div class="game-content-inner" fxLayout="column" fxFlex="0 0 60%" fxFlex.lt-md="0 0 100%">
+
+      <!-- Tabs -->
+      <mat-tab-group color="accent" mat-align-tabs="start">
+
+        <!-- Overview -->
+        <mat-tab [label]="'components.game_detail.tabs.overview' | translate">
+          <div class="tab-inner">
+            <p>{{game.overview}}</p>
+          </div>
+        </mat-tab>
+
+          <!-- Gallery -->
+          <mat-tab [label]="'components.game_detail.tabs.screenshots' | translate">
+
+            <div class="tab-inner">
+              <vgl-image-gallery  [imagesSrcUrls]="game.galleryUrls"></vgl-image-gallery>
+            </div>
+          </mat-tab>
+
+          <!-- Videos -->
+          <mat-tab [label]="'components.game_detail.tabs.videos' | translate">
+            <div class="tab-inner">
+              <vgl-image-gallery  [imagesSrcUrls]="game.galleryUrls"></vgl-image-gallery>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+
+
+    </div>
+    <!-- Right spacer -->
+    <div fxHide.lt-md fxFlex="1 0 20%"></div>
+  </div>
 
 </section>

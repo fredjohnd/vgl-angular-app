@@ -1,9 +1,19 @@
 {
-    "modules": {
-        "app": {
-            "index": {
-                "title": "VGL Web"
-            }
+    "components": {
+      "index": {
+          "title": "VGL Web"
+      },
+      "game_detail": {
+
+        "released": "Released:",
+        "rating": "Rating",
+        "follow": "Follow",
+        "add_to_list": "Add to list",
+        "tabs": {
+          "overview": "Overview",
+          "screenshots": "Screenshots",
+          "videos": "Videos"
         }
+      }
     }
 }

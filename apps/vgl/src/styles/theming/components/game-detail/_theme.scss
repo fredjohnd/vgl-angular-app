@@ -1,0 +1,34 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@import '../../variables/colors';
+
+
+/**
+* Mixin to style vgl-game-detail component
+*/
+@mixin vgl-game-detail-theme($theme) {
+
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  $component-theme-color: $primary;
+  $level: 200;
+  $level-contrast: $level + '-contrast';
+
+  .game-detail {
+
+    .game-content-outer {
+      background-color: $color-black;
+    }
+    .game-content-inner {
+      background-color: $color-white;
+      color: mat.get-color-from-palette($component-theme-color, $level-contrast);
+    }
+
+    .mat-tab-label, .mat-tab-link {
+      color: mat.get-color-from-palette($component-theme-color, $level-contrast);
+    }
+  }
+}
