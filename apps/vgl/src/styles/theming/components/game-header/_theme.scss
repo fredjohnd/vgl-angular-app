@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+/**
+* Mixin to style vgl-game-header component
+*/
+@mixin vgl-game-header-theme($theme) {
+
+  $color-config: mat.get-color-config($theme);
+  $primary: map.get($color-config, 'primary');
+  $accent: map.get($color-config, 'accent');
+
+  $component-theme-color: $primary;
+  $level: 500;
+  $level-contrast: $level + '-contrast';
+
+  .game-header {
+    background-color: mat.get-color-from-palette($component-theme-color, $level);
+    color: mat.get-color-from-palette($component-theme-color, $level-contrast);
+  }
+}

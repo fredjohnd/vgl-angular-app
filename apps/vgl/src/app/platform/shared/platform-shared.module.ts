@@ -5,6 +5,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { MaterialModule } from './material.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -16,6 +17,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     FlexLayoutModule,
     TranslateModule,
+    MaterialModule,
     UiModule,
     TranslateModule.forRoot({
         defaultLanguage: 'en',
@@ -30,6 +32,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     FlexLayoutModule,
     UiModule,
+    MaterialModule,
     TranslateModule
   ]
 })

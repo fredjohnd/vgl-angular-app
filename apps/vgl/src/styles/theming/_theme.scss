@@ -1,0 +1,29 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+// Import pallete
+@import 'palette/palette';
+
+
+$vgl-theme: mat.define-light-theme((
+  color: (
+    primary: $vgl-primary,
+    accent: $vgl-accent,
+    warn: $vgl-warn,
+  )
+));
+
+// Import app's components themes
+@import 'components/game-header/theme';
+@import 'components/button/theme';
+
+
+/**
+* Mixin to style all vgl-game-header component
+*/
+@mixin vgl-all-component-themes($theme) {
+
+  @include vgl-game-header-theme($theme);
+  @include vgl-button-theme($theme);
+
+}

@@ -1,5 +1,5 @@
-<header>
-  <div fxLayout="row" fxLayoutGap="10px">
+<header class="game-header">
+  <div fxLayout="row" fxLayoutGap="40px">
 
     <!-- Image thumbnail -->
     <div class="image-wrapper" fxLayout="row" fxLayoutAlign="center center" fxFlex="nogrow">
@@ -8,11 +8,17 @@
 
     <!-- Title / Subtitles -->
     <div class="header-left" fxLayout="column" fxFlex="noshrink">
-      <h2 class="header-title">{{game.name}}</h2>
-      <h5 class="header-subtitle">Released: {{game.releaseDate | date:'dd MMM YYYY'}}</h5>
-      <h5 class="header-subtitle">{{game.developer.name}}</h5>
+      <h2 class="header-title mat-display-2">{{game.name}}</h2>
+      <h5 class="header-subtitle mat-subheading-2">{{game.platform.name}}</h5>
+      <h5 class="header-subtitle mat-subheading-1">Released: {{game.releaseDate | date:'dd MMM YYYY'}}</h5>
+      <h5 class="header-subtitle mat-subheading-1">{{game.developer.name}}</h5>
       <div class="header-left-actions">
-        <button>Follow</button>
+        <button
+        mat-raised-button
+        color="accent">
+          <mat-icon class="button-icon">favorite</mat-icon>
+          <span>Follow</span>
+        </button>
       </div>
     </div>
 
@@ -22,7 +28,12 @@
     <!-- Right section -->
     <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px 10px grid">
       <span>Rating: 10</span>
-      <span><button>Add to collection</button></span>
+      <span>   <button
+        mat-raised-button
+        color="accent">
+          <mat-icon class="button-icon">add</mat-icon>
+          <span>Add to list</span>
+        </button></span>
     </div>
   </div>
 </header>
