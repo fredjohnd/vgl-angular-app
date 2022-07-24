@@ -2,22 +2,27 @@
   <div fxLayout="row" fxLayoutGap="10px">
 
     <!-- Image thumbnail -->
-    <img [src]="game.thumbnailUrl">
+    <div class="image-wrapper" fxLayout="row" fxLayoutAlign="center center" fxFlex="nogrow">
+      <img class="thumbnail" [src]="game.thumbnailUrl">
+    </div>
 
     <!-- Title / Subtitles -->
-    <div fxFlex="noshrink">
-      <h2>{{game.name}}</h2>
-      <h4>Released: {{game.releaseDate | date:'dd MMM YYYY'}}</h4>
-      <h5>{{game.developer.name}}</h5>
-  </div>
+    <div class="header-left" fxLayout="column" fxFlex="noshrink">
+      <h2 class="header-title">{{game.name}}</h2>
+      <h5 class="header-subtitle">Released: {{game.releaseDate | date:'dd MMM YYYY'}}</h5>
+      <h5 class="header-subtitle">{{game.developer.name}}</h5>
+      <div class="header-left-actions">
+        <button>Follow</button>
+      </div>
+    </div>
 
-  <!-- Spacer -->
-  <div fxFlex="1 1 auto"></div>
+    <!-- Spacer -->
+    <div fxFlex="1 1 auto"></div>
 
-  <!-- Right section -->
-  <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px 10px grid">
-    <span>Rating: 10</span>
-    <span><button>Add to collection</button></span>
-  </div>
+    <!-- Right section -->
+    <div fxLayout="column" fxLayoutAlign="center start" fxLayoutGap="10px 10px grid">
+      <span>Rating: 10</span>
+      <span><button>Add to collection</button></span>
+    </div>
   </div>
 </header>

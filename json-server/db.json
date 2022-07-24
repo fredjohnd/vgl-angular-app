@@ -57,7 +57,7 @@
             "platformId": 1,
             "genreId": 3,
             "developerId": 1,
-            "thumbnailUrl": "https://picsum.photos/100",
+            "thumbnailUrl": "https://picsum.photos/100/100",
             "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
             "releaseDate": "2005-02-22",
             "overview": "GT4 continues in its predecessors' footsteps by offering an extremely large list of cars; the PAL version features 721 cars from 80 manufacturers.",

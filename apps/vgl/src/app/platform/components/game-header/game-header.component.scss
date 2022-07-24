@@ -1,3 +1,26 @@
 header {
-  border-bottom: 1px solid grey;
+  height: 250px;
+  background: #000;
+  padding: 10px;
+  color: white;
+  // border-bottom: 1px solid grey;
+}
+
+.thumbnail {
+  width: 200px;
+  height: 200px;
+}
+
+.header-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.header-subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-left-actions {
+  margin-top: 10px;
 }
