@@ -1,0 +1,23 @@
+<div class="list-modal" fxLayout="column">
+
+  <h2 mat-dialog-title fxLayout="row center" fxLayoutAlign="space-between center">
+    <span>Add to list</span>
+    <button mat-flat-button>
+      <mat-icon class="button-icon">close</mat-icon>
+
+    </button>
+  </h2>
+
+  <mat-dialog-content fxFlex="1 0 auto">
+    <p *ngFor="let list of data">
+      <mat-checkbox>{{list.name}}</mat-checkbox>
+    </p>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+    <button class="mat-raised-button">Close</button>
+    <button class="mat-raised-button mat-primary">Save</button>
+  </mat-dialog-actions>
+
+</div>

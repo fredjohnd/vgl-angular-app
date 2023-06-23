@@ -7,6 +7,7 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
 import { GameHeaderComponent } from './components/game-header/game-header.component';
 import { PlatformSharedModule } from './shared/platform-shared.module';
 import { VglImageGalleryModule } from '@vgl/image-gallery';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { VglImageGalleryModule } from '@vgl/image-gallery';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     PlatformSharedModule,
     PlatformRoutingModule,
     VglImageGalleryModule

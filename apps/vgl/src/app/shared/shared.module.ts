@@ -5,33 +5,33 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { ListModalComponent } from './components/list-modal/list-modal.component';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../material.module';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
-    return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
   imports: [
+    CommonModule,
     HttpClientModule,
     FlexLayoutModule,
     TranslateModule,
+    MaterialModule,
     UiModule,
     TranslateModule.forRoot({
-        defaultLanguage: 'en',
-        loader: {
-            provide: TranslateLoader,
-            useFactory: HttpLoaderFactory,
-            deps: [HttpClient]
-        }
-    })
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
-  exports: [
-    HttpClientModule,
-    FlexLayoutModule,
-    UiModule,
-    TranslateModule
-  ]
+  exports: [HttpClientModule, FlexLayoutModule, UiModule, TranslateModule, ListModalComponent],
+  declarations: [ListModalComponent],
 })
-
 export class SharedModule {}

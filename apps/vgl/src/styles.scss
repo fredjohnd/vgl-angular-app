@@ -21,6 +21,7 @@
 @include mat.toolbar-theme($vgl-theme);
 @include mat.button-theme($vgl-theme);
 @include mat.tabs-theme($vgl-theme);
+@include mat.dialog-theme($vgl-theme);
 
 // Include vgl components
 @include vgl-all-component-themes($vgl-theme);

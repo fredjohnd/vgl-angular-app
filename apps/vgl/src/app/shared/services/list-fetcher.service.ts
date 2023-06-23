@@ -21,6 +21,17 @@ export class ListFetcherService implements IListFetcherService {
   }
 
   /**
+   * Returns own lists
+   * Due to json-server limitations we simply pass in our id
+   * But in real backend service will have it's own endpoint to avoid fetching any users lists
+   * */
+  getOwnLists(): Observable<IList[]> {
+    const endpoint = environment.API.LISTS.ALL;
+    const params = {id: "1"};
+    return this.web.get(endpoint);
+  }
+
+  /**
    * Gets a game by its Id
    * @param slug The slug of the object
    * @returns
