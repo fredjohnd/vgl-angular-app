@@ -1,0 +1,12 @@
+
+  <section>
+    <ng-container *ngIf="items?.results">
+      <ul fxLayout="column" fxLayoutGap="10px">
+        <li *ngFor="let item of items.results">
+          <a [routerLink]="[item.slug]">{{item.name}} by {{item.username}}</a>
+        </li>
+      </ul>
+
+    </ng-container>
+  </section>
+

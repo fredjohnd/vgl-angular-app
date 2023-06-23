@@ -25,6 +25,12 @@ export class GameFetcherService implements IGameFetcherService {
         return this.web.get(endpoint, params);
     }
 
+    getGamesByIds(ids: string[]): Observable<IGameExpanded[]> {
+      const endpoint = `${environment.API.GAMES.SINGLE}`;
+
+      return this.web.get(endpoint, { id: ids });
+    }
+
     getGamesByPlatform(platformId: string, page: number = 1): Observable<IPaginatedResults<IGame>> {
         const endpoint = environment.API.GAMES.ALL;
         return this.web.get(endpoint, {platformId, page: page.toString(), limit: '10'});

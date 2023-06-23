@@ -1,0 +1,8 @@
+
+<div *ngIf="(list$ | async) as list">
+  <h2>{{list.name}}</h2>
+<hr>
+  <div *ngFor="let game of list.games" fxLayout="row">
+    <h3>{{game.name}}</h3>
+    </div>
+</div>

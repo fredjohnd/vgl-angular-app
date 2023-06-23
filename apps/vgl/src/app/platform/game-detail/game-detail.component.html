@@ -2,7 +2,10 @@
 <section class="game-detail" *ngIf="(game$ | async) as game" fxLayout="column">
 
   <!-- Game header -->
-  <vgl-game-header [game]="game"></vgl-game-header>
+  <vgl-game-header
+    [game]="game"
+    (addToList)="addToListClick(game.id)">
+  </vgl-game-header>
 
   <!-- Game content -->
   <div class="game-content-outer" fxLayout="row" >

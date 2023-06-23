@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { IGameExpanded } from '../../../shared/interfaces';
 
 @Component({
@@ -10,4 +10,5 @@ import { IGameExpanded } from '../../../shared/interfaces';
 export class GameHeaderComponent {
 
   @Input() game: IGameExpanded;
+  @Output() addToList = new EventEmitter();
 }

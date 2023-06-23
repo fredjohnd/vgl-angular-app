@@ -1,115 +1,160 @@
 {
-    "platforms": [
-        {
-            "id": 1,
-            "name": "PS2",
-            "slug": "ps2"
-        },
-        {
-            "id": 2,
-            "name": "WII",
-            "slug": "wii"
-        }
-    ],
-
-    "genres": [
-        {
-            "id": 1,
-            "name": "Action",
-            "description": "Pew pew pew! Bam! Pow!"
-        },
-        {
-            "id": 2,
-            "name": "RPG",
-            "description": "+10 XP"
-        },
-        {
-            "id": 3,
-            "name": "Racing",
-            "description": "Vroom vroom"
-        },
-        {
-            "id": 4,
-            "name": "Sports",
-            "description": "Goal ! Goal! Goaaaaaal!"
-        }
-    ],
-
-    "developers": [
-        {
-            "id": 1,
-            "name": "Polyphony Digital Inc."
-        },
-        {
-            "id": 2,
-            "name": "Squaresoft"
-        },
-        {
-            "id": 3,
-            "name": "Nintendo"
-        }
-    ],
-
-    "games": [
-        {
-            "id": 1,
-            "name": "Gran Turismo 4",
-            "platformId": 1,
-            "genreId": 3,
-            "developerId": 1,
-            "thumbnailUrl": "https://picsum.photos/100/100",
-            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
-            "releaseDate": "2005-02-22",
-            "overview": "GT4 continues in its predecessors' footsteps by offering an extremely large list of cars; the PAL version features 721 cars from 80 manufacturers.",
-            "slug": "gt4"
-        },
-        {
-            "id": 2,
-            "name": "Final Fantasy X",
-            "platformId": 1,
-            "genreId": 2,
-            "developerId": 2,
-            "thumbnailUrl": "https://picsum.photos/100",
-            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
-            "releaseDate": "2001-12-17",
-            "overview": "There are seven main playable characters in Final Fantasy X. Tidus is a cheerful young teenager and the star blitzball player for the Zanarkand Abes. He has long resented his father, a renowned blitzball player who disappeared during Tidus's youth. Yuna is the daughter of the High Summoner Braska, who defeated Sin to bring about the Calm, a time of peace. Yuna embarks on a pilgrimage to obtain the final aeon and defeat Sin. Kimahri Ronso is a young warrior of the Ronso tribe who watched over Yuna during her childhood. Wakka is a blitzball player and devout follower of the Yevon order. Lulu is a stoic and self-possessed, but well-meaning Black Mage. Auron is a taciturn former warrior monk, and finally Rikku is a perky Al Bhed girl with extensive knowledge of machinery. The primary antagonists of the game are Maester Seymour Guado and the other maesters of the Yevon religion, while the enormous whale-like monster Sin serves as the primary source of conflict.",
-            "slug": "ffx"
-        },
-        {
-            "id": 3,
-            "name": "Mario Kart 8",
-            "platformId": 2,
-            "genreId": 3,
-            "developerId": 3,
-            "thumbnailUrl": "https://picsum.photos/100",
-            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
-            "releaseDate": "2014-05-30",
-            "overview": "Feel the rush as your kart rockets across the ceiling!",
-            "slug": "mariokart8"
-        },
-        {
-            "id": 4,
-            "name": "Mario Tennis",
-            "platformId": 2,
-            "genreId": 4,
-            "developerId": 3,
-            "thumbnailUrl": "https://picsum.photos/100",
-            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
-            "releaseDate": "2015-07-09",
-            "overview": "The game that made Mario™ a sports legend!",
-            "slug": "mariotennis"
-        },
-        {
-            "id": 5,
-            "name": "Final Fantasy X-II",
-            "platformId": 1,
-            "genreId": 2,
-            "developerId": 2,
-            "thumbnailUrl": "https://picsum.photos/100",
-            "galleryUrls": ["https://picsum.photos/100", "https://picsum.photos/100"],
-            "releaseDate": "2003-11-18",
-            "overview": "The game's story follows the character Yuna from Final Fantasy X as she seeks to resolve political conflicts in the fictional world of Spira before it leads to war.",
-            "slug": "ffx-2"
-        }
-    ]
+  "users": [
+    {
+      "id": 1,
+      "name": "Fred"
+    }
+  ],
+  "platforms": [
+    {
+      "id": 1,
+      "name": "PS2",
+      "slug": "ps2"
+    },
+    {
+      "id": 2,
+      "name": "WII",
+      "slug": "wii"
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Action",
+      "description": "Pew pew pew! Bam! Pow!"
+    },
+    {
+      "id": 2,
+      "name": "RPG",
+      "description": "+10 XP"
+    },
+    {
+      "id": 3,
+      "name": "Racing",
+      "description": "Vroom vroom"
+    },
+    {
+      "id": 4,
+      "name": "Sports",
+      "description": "Goal ! Goal! Goaaaaaal!"
+    }
+  ],
+  "developers": [
+    {
+      "id": 1,
+      "name": "Polyphony Digital Inc."
+    },
+    {
+      "id": 2,
+      "name": "Squaresoft"
+    },
+    {
+      "id": 3,
+      "name": "Nintendo"
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "name": "Gran Turismo 4",
+      "platformId": 1,
+      "genreId": 3,
+      "developerId": 1,
+      "thumbnailUrl": "https://picsum.photos/100/100",
+      "galleryUrls": [
+        "https://picsum.photos/100",
+        "https://picsum.photos/100"
+      ],
+      "releaseDate": "2005-02-22",
+      "overview": "GT4 continues in its predecessors' footsteps by offering an extremely large list of cars; the PAL version features 721 cars from 80 manufacturers.",
+      "slug": "gt4"
+    },
+    {
+      "id": 2,
+      "name": "Final Fantasy X",
+      "platformId": 1,
+      "genreId": 2,
+      "developerId": 2,
+      "thumbnailUrl": "https://picsum.photos/100",
+      "galleryUrls": [
+        "https://picsum.photos/100",
+        "https://picsum.photos/100"
+      ],
+      "releaseDate": "2001-12-17",
+      "overview": "There are seven main playable characters in Final Fantasy X. Tidus is a cheerful young teenager and the star blitzball player for the Zanarkand Abes. He has long resented his father, a renowned blitzball player who disappeared during Tidus's youth. Yuna is the daughter of the High Summoner Braska, who defeated Sin to bring about the Calm, a time of peace. Yuna embarks on a pilgrimage to obtain the final aeon and defeat Sin. Kimahri Ronso is a young warrior of the Ronso tribe who watched over Yuna during her childhood. Wakka is a blitzball player and devout follower of the Yevon order. Lulu is a stoic and self-possessed, but well-meaning Black Mage. Auron is a taciturn former warrior monk, and finally Rikku is a perky Al Bhed girl with extensive knowledge of machinery. The primary antagonists of the game are Maester Seymour Guado and the other maesters of the Yevon religion, while the enormous whale-like monster Sin serves as the primary source of conflict.",
+      "slug": "ffx"
+    },
+    {
+      "id": 3,
+      "name": "Mario Kart 8",
+      "platformId": 2,
+      "genreId": 3,
+      "developerId": 3,
+      "thumbnailUrl": "https://picsum.photos/100",
+      "galleryUrls": [
+        "https://picsum.photos/100",
+        "https://picsum.photos/100"
+      ],
+      "releaseDate": "2014-05-30",
+      "overview": "Feel the rush as your kart rockets across the ceiling!",
+      "slug": "mariokart8"
+    },
+    {
+      "id": 4,
+      "name": "Mario Tennis",
+      "platformId": 2,
+      "genreId": 4,
+      "developerId": 3,
+      "thumbnailUrl": "https://picsum.photos/100",
+      "galleryUrls": [
+        "https://picsum.photos/100",
+        "https://picsum.photos/100"
+      ],
+      "releaseDate": "2015-07-09",
+      "overview": "The game that made Mario™ a sports legend!",
+      "slug": "mariotennis"
+    },
+    {
+      "id": 5,
+      "name": "Final Fantasy X-II",
+      "platformId": 1,
+      "genreId": 2,
+      "developerId": 2,
+      "thumbnailUrl": "https://picsum.photos/100",
+      "galleryUrls": [
+        "https://picsum.photos/100",
+        "https://picsum.photos/100"
+      ],
+      "releaseDate": "2003-11-18",
+      "overview": "The game's story follows the character Yuna from Final Fantasy X as she seeks to resolve political conflicts in the fictional world of Spira before it leads to war.",
+      "slug": "ffx-2"
+    }
+  ],
+  "lists": [
+    {
+      "id": 1,
+      "name": "Top RPG's",
+      "slug": "top-rpgs-by-fred",
+      "username": "Fred",
+      "gameIds": [
+        2,
+        5,
+        3,
+        1,
+        1
+      ],
+      "likes": 388
+    },
+    {
+      "id": 2,
+      "name": "Top 10 Racing games",
+      "slug": "top-10-racing-games-by-fred",
+      "username": "Fred",
+      "gameIds": [
+        1,
+        3
+      ],
+      "likes": 11
+    }
+  ]
 }

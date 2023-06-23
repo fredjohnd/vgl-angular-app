@@ -1,7 +1,8 @@
 {
     "components": {
       "index": {
-          "title": "VGL Web"
+          "title": "VGL Web",
+          "my_lists": "My list"
       },
       "game_detail": {
 
