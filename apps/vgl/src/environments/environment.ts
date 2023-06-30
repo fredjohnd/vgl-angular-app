@@ -14,7 +14,12 @@ export const environment = {
     GAMES: {
       ALL: 'games',
       SINGLE: 'games'
-    }
+    },
+    LISTS: {
+      ALL: 'lists',
+      SINGLE: 'lists'
+    },
+
   }
 };
 

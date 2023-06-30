@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IPlatform } from '../../shared/interfaces/platform.interface';
 import { PlatformFetcherService } from '../../shared/services/platforms-fetcher.service';
@@ -10,7 +7,7 @@ import { PlatformFetcherService } from '../../shared/services/platforms-fetcher.
 @Injectable({
   providedIn: 'root'
 })
-export class PlatformResolver implements Resolve<Observable<IPlatform>> {
+export class PlatformResolver  {
 
   constructor(private platformFetcher: PlatformFetcherService) {}
 

@@ -14,10 +14,15 @@
           <span>{{ ('components.index.title' | translate) | uppercase }}</span>
         </a>
 
-
-        <!-- <span fxFlex="1 1 auto"></span> -->
-
         <a *ngFor="let platform of (platforms$ | async)" mat-button [routerLink]="['platform', platform.slug]">{{platform.name}}</a>
+
+        <span fxFlex="1 1 auto"></span>
+
+        <a routerLink="/lists" mat-button aria-label="list link">
+          <mat-icon class="icon-homepage">sports_esports</mat-icon>
+          <span>{{ ('components.index.my_lists' | translate) | uppercase }}</span>
+        </a>
+
       </vgl-nav>
     </nav>
   </header>

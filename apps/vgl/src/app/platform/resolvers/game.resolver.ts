@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  ActivatedRouteSnapshot
-} from '@angular/router';
+import { ActivatedRouteSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { IGame } from '../../shared/interfaces/game.interface';
 import { GameFetcherService } from '../../shared/services/game-fetcher.service';
@@ -10,7 +7,7 @@ import { GameFetcherService } from '../../shared/services/game-fetcher.service';
 @Injectable({
   providedIn: 'root'
 })
-export class GameResolver implements Resolve<Observable<IGame>> {
+export class GameResolver  {
 
   constructor(private gameFetcher: GameFetcherService) {}
 
