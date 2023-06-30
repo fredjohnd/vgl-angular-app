@@ -1,4 +1,6 @@
 {
+  "name": "vgl",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/vgl/src",
   "prefix": "vgl",
@@ -69,14 +71,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/vgl/**/*.ts", "apps/vgl/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/vgl"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/vgl"],
       "options": {
         "jestConfig": "apps/vgl/jest.config.ts",
         "passWithNoTests": true

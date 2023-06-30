@@ -5,14 +5,17 @@ import { IndexComponent } from './index/index.component';
 const routes: Routes = [
 
   // Root/Index Route
-  { 
-    path: '', 
-    pathMatch: 'full', 
+  {
+    path: '',
+    pathMatch: 'full',
     component: IndexComponent
   },
 
   // Platform Route
-  { path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule) }
+  { path: 'platform', loadChildren: () => import('./platform/platform.module').then(m => m.PlatformModule) },
+
+  // List module
+  { path: 'lists', loadChildren: () => import('./list/list.module').then(m => m.ListModule) }
 
 ];
 

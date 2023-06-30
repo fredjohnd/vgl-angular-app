@@ -12,12 +12,14 @@ import { IPlatform } from './shared/interfaces/platform.interface';
 export class AppComponent {
   title = 'vgl';
 
-  protected platforms$: Observable<IPlatform[]> = this.platformFetcher.getPlatforms();
+  protected platforms$: Observable<IPlatform[]>;
 
   constructor(private platformFetcher: PlatformFetcherService, translate: TranslateService) {
 
     translate.setDefaultLang('en');
     translate.use('en');
+
+    this.platforms$ = this.platformFetcher.getPlatforms();
   }
 
 }
